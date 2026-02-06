@@ -1,7 +1,7 @@
 {
   "name": "event-reserve-backend",
   "version": "1.0.0",
-  "description": "Event reservation platform backend (NestJS + PostgreSQL)",
+  "description": "Event reservation platform backend (NestJS + MongoDB)",
   "license": "MIT",
   "scripts": {
     "start": "node dist/main.js",
