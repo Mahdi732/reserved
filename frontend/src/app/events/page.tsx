@@ -20,14 +20,16 @@ export default async function EventsPage() {
 
   return (
     <div>
-      <h1>Published Events</h1>
+      <div className="page-header">
+        <h1>Upcoming Events</h1>
+      </div>
       {events.length === 0 ? (
-        <div className="text-center">
+        <div className="empty-state">
           <p>No events available at the moment.</p>
-          <p className="text-gray-600">Check back later for new events!</p>
+          <p>Check back later for new events!</p>
         </div>
       ) : (
-        <div>
+        <div className="events-grid">
           {events.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
