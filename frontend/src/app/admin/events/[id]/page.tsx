@@ -83,7 +83,7 @@ function EditEventForm() {
   return (
     <div>
       <h1>Edit Event</h1>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form form-wide" onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="form-label">Title</label>
           <input

@@ -29,48 +29,57 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="text-center">
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <div className="form-group">
-          <label className="form-label">Name</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="form-input"
-            required
-            disabled={loading}
-          />
+    <div className="auth-page">
+      <div className="auth-card">
+        <h1>Create Account</h1>
+        <p className="subtitle">Join EventReserve and start booking events</p>
+        <form onSubmit={handleSubmit} className="form">
+          <div className="form-group">
+            <label className="form-label">Name</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="form-input"
+              placeholder="Your full name"
+              required
+              disabled={loading}
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="form-input"
+              placeholder="you@example.com"
+              required
+              disabled={loading}
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label">Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="form-input"
+              placeholder="Min. 6 characters"
+              required
+              minLength={6}
+              disabled={loading}
+            />
+          </div>
+          {error && <p className="error">{error}</p>}
+          <button type="submit" className="btn btn-primary" disabled={loading}>
+            {loading ? 'Creating account...' : 'Create Account'}
+          </button>
+        </form>
+        <div className="auth-footer">
+          Already have an account? <a href="/login">Sign in</a>
         </div>
-        <div className="form-group">
-          <label className="form-label">Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="form-input"
-            required
-            disabled={loading}
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Password</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="form-input"
-            required
-            minLength={6}
-            disabled={loading}
-          />
-        </div>
-        {error && <p className="error">{error}</p>}
-        <button type="submit" className="btn btn-primary" disabled={loading}>
-          {loading ? 'Creating account...' : 'Create Account'}
-        </button>
-      </form>
+      </div>
     </div>
   );
 }
