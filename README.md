@@ -33,7 +33,7 @@ A full-stack web application for managing events and reservations with role-base
                            │
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                      PostgreSQL Database                        │
+│                      MongoDB Database                        │
 │  ┌──────────┐  ┌──────────┐  ┌──────────────┐                  │
 │  │   User   │  │  Event   │  │ Reservation  │                  │
 │  └──────────┘  └──────────┘  └──────────────┘                  │
