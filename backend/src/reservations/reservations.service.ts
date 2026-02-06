@@ -217,7 +217,10 @@ export class ReservationsService {
       [ReservationStatus.REFUSED]: 0,
       [ReservationStatus.CANCELED]: 0,
     };
-    reservations.forEach((r) => statusCounts[r.status]++);
+    reservations.forEach((r) => {
+      const s = r.status as ReservationStatus;
+      if (s in statusCounts) statusCounts[s]++;
+    });
     return { statusCounts, total: reservations.length };
   }
 }
