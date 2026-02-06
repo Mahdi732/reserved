@@ -286,7 +286,3 @@ reserve/
 ├── docker-compose.yml
 └── README.md
 ```
-
-## License
-
-MIT
