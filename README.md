@@ -7,11 +7,11 @@ A full-stack web application for managing events and reservations with role-base
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Frontend (Next.js)                       │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │ Public Pages │  │  Participant │  │    Admin     │          │
-│  │    (SSR)     │  │  Dashboard   │  │  Dashboard   │          │
-│  │  /events     │  │  /dashboard  │  │   /admin     │          │
-│  └──────────────┘  └──────────────┘  └──────────────┘          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │
+│  │ Public Pages │  │  Participant │  │    Admin     │           │
+│  │    (SSR)     │  │  Dashboard   │  │  Dashboard   │           │
+│  │  /events     │  │  /dashboard  │  │   /admin     │           │
+│  └──────────────┘  └──────────────┘  └──────────────┘           │
 │                          │                                      │
 │                    Context API (Auth)                           │
 │                          │                                      │
@@ -21,10 +21,10 @@ A full-stack web application for managing events and reservations with role-base
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                       Backend (NestJS)                          │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │ AuthModule   │  │ EventsModule │  │ Reservations │          │
-│  │ JWT Strategy │  │   CRUD       │  │   Module     │          │
-│  └──────────────┘  └──────────────┘  └──────────────┘          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │
+│  │ AuthModule   │  │ EventsModule │  │ Reservations │           │
+│  │ JWT Strategy │  │   CRUD       │  │   Module     │           │
+│  └──────────────┘  └──────────────┘  └──────────────┘           │
 │                          │                                      │
 │              Guards (JWT, Roles) + Validation                   │
 │                          │                                      │
@@ -33,10 +33,10 @@ A full-stack web application for managing events and reservations with role-base
                            │
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                      MongoDB Database                        │
-│  ┌──────────┐  ┌──────────┐  ┌──────────────┐                  │
-│  │   User   │  │  Event   │  │ Reservation  │                  │
-│  └──────────┘  └──────────┘  └──────────────┘                  │
+│                      MongoDB Database                           │
+│  ┌──────────┐  ┌──────────┐  ┌──────────────┐                   │
+│  │   User   │  │  Event   │  │ Reservation  │                   │
+│  └──────────┘  └──────────┘  └──────────────┘                   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
