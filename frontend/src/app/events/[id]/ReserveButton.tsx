@@ -39,14 +39,14 @@ export default function ReserveButton({ eventId }: Props) {
   };
 
   return (
-    <div className="mt-3">
-      <button onClick={handleReserve} disabled={loading} className="btn btn-primary">
-        {loading ? 'Reserving...' : 'Reserve Your Spot'}
+    <div>
+      <button onClick={handleReserve} disabled={loading} className="btn btn-primary" style={{ width: '100%' }}>
+        {loading ? 'Reserving...' : '🎟️ Reserve Your Spot'}
       </button>
       {message && (
-        <p className={`mt-2 ${messageType === 'success' ? 'success' : 'error'}`}>
+        <div className={`mt-1 ${messageType === 'success' ? 'alert alert-success' : 'alert alert-error'}`}>
           {message}
-        </p>
+        </div>
       )}
     </div>
   );

@@ -32,7 +32,7 @@ describe('EventCard', () => {
 
   it('renders remaining places', () => {
     render(<EventCard event={mockEvent} />);
-    expect(screen.getByText(/30 \/ 50/)).toBeInTheDocument();
+    expect(screen.getByText(/30 spots left/)).toBeInTheDocument();
   });
 
   it('renders view details link', () => {
