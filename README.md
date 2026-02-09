@@ -97,7 +97,7 @@ A full-stack web application for managing events and reservations with role-base
 
 ## Tech Stack
 
-- **Backend**: NestJS (TypeScript), TypeORM, PostgreSQL, JWT, class-validator
+- **Backend**: NestJS (TypeScript), MongoDB, JWT, class-validator
 - **Frontend**: Next.js 14 (TypeScript), Context API, Axios
 - **Testing**: Jest, React Testing Library, Supertest
 - **DevOps**: Docker, Docker Compose, GitHub Actions
@@ -105,7 +105,6 @@ A full-stack web application for managing events and reservations with role-base
 ## Prerequisites
 
 - Node.js 20+
-- PostgreSQL 15+
 - Docker & Docker Compose (for containerized deployment)
 
 ## Installation & Setup
@@ -122,7 +121,7 @@ A full-stack web application for managing events and reservations with role-base
    ```bash
    cd backend
    cp .env.example .env
-   # Edit .env with your PostgreSQL connection and JWT secret
+   # Edit .env with your MongoDB connection and JWT secret
    npm install
    npm run start:dev
    ```
@@ -137,7 +136,7 @@ A full-stack web application for managing events and reservations with role-base
    ```
 
 4. **Database**
-   - Create a PostgreSQL database named `reserve_db`
+   - Create a MongoDB database named `reserve_db`
    - The backend will sync entities automatically in development
 
 ### Docker Deployment
@@ -153,7 +152,6 @@ docker-compose up --build
 Services will be available at:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:4000/api
-- PostgreSQL: localhost:5432
 
 ## Environment Variables
 
@@ -161,7 +159,7 @@ Services will be available at:
 ```
 NODE_ENV=development
 PORT=4000
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/reserve_db
+DATABASE_URL=mongodb://localhost:27017/reserve_db
 JWT_SECRET=your_secure_secret_min_16_chars
 JWT_EXPIRES_IN=1d
 FRONTEND_URL=http://localhost:3000
